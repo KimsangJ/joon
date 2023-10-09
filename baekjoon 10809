@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	int a[26];
+	char s[100];
+	int na;
+
+	for (int i = 0; i < 26; i++) a[i] = -1;
+
+	scanf("%s", s);
+
+	for (int i = 0; i < strlen(s); i++) {
+		na = s[i] - 'a';
+		if (a[na] == -1) a[na] = i;
+	}
+	for (int i = 0; i < 26; i++) {
+		printf("%d ", a[i]);
+	}
+}
