@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char s[15];
+	int a,time=0;
+
+	scanf("%s", s);
+
+	for (int i = 0; i < strlen(s); i++) {
+		a = s[i] - 'A';
+		if (0 <= a && a < 3) time += 3;
+		else if (2 < a && a < 6) time += 4;
+		else if (5 < a && a < 9) time += 5;
+		else if (8 < a && a < 12) time += 6;
+		else if (11 < a && a < 15) time += 7;
+		else if (14 < a && a < 19) time += 8;
+		else if (18 < a && a < 22) time += 9;
+		else time += 10;
+	}
+	printf("%d", time);
+}
